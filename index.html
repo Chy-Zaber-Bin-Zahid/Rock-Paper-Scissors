@@ -10,28 +10,41 @@
   <body>
     <form class="form">
       <div class="heading"><h1>Welcome to Rock Paper Scissors Game</h1></div>
+
       <div class="name in">
+        <!-- name part -->
         <div class="enter-name">
           <h3>Enter Your Name</h3>
           <input id="enter-name-inp" type="text" required />
         </div>
+
+        <!-- gender part -->
         <div class="gender in">
           <h3>Select Your Gender</h3>
-          <input type="radio" name="gender" value="Male" />Male
-          <input type="radio" name="gender" value="Female" />Female
+          <div class="gender-between">
+            <input id="male" type="radio" name="gender" value="Male" />Male
+            <input type="radio" name="gender" value="Female" />Female
+          </div>
         </div>
+
+        <!-- opponent part -->
         <div class="opponent in">
           <h3>Select Your Opponent</h3>
-          <input type="radio" name="opponent" value="MaleOP" /><img
-            class="normal"
-            src="boy_normal.png"
-            alt=""
-          />
-          <input type="radio" name="opponent" value="FemaleOP" /><img
-            class="normal"
-            src="girl_normal.png"
-            alt=""
-          />
+          <div class="opponent-between">
+            <input type="radio" name="opponent" value="MaleOP" />Hitoshi<img
+              class="normal"
+              src="boy_normal.png"
+              alt=""
+            />
+            <input type="radio" name="opponent" value="FemaleOP" />Mikasa<img
+              class="normal"
+              src="girl_normal.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="start">
+          <button>Start</button>
         </div>
       </div>
     </form>
