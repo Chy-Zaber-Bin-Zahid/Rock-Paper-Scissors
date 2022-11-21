@@ -1,1 +1,46 @@
+/* Form css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 110%;
+}
+
+.form {
+  padding: 1em;
+}
+
+.heading {
+  text-align: center;
+}
+
+.name {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.in {
+  padding: 1em;
+}
+
+.in h3 {
+  text-align: center;
+}
+
+.enter-name, h3, input{
+  padding: .2em;
+}
+
+#enter-name-inp {
+  width: 100%;
+  border-radius: 0;
+  padding: .2em .2em .2em .2em;
+}
+
 

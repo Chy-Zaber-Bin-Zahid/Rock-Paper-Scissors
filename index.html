@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <form>
-    <div class="name">
-      <h1>Welcome to Rock Paper Scissors Game</h1>
-      <h3>Enter Your Name</h3>
-      <input type="text" required>
-      <h3>Select Your Gender</h3>
-      <input type="radio" name="gender" value="Male">Male
-      <input type="radio" name="gender" value="Female">Female
-      <h3>Select Your Opponent</h3>
-      <input type="radio" name="opponent" value="MaleOP"><img src="" alt="">
-      <input type="radio" name="opponent" value="FemaleOP"><img src="" alt="">
-
-    </div>
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="form">
+      <div class="heading"><h1>Welcome to Rock Paper Scissors Game</h1></div>
+      <div class="name in">
+        <div class="enter-name">
+          <h3>Enter Your Name</h3>
+          <input id="enter-name-inp" type="text" required />
+        </div>
+        <div class="gender in">
+          <h3>Select Your Gender</h3>
+          <input type="radio" name="gender" value="Male" />Male
+          <input type="radio" name="gender" value="Female" />Female
+        </div>
+        <div class="opponent in">
+          <h3>Select Your Opponent</h3>
+          <input type="radio" name="opponent" value="MaleOP" /><img
+            class="normal"
+            src="boy_normal.png"
+            alt=""
+          />
+          <input type="radio" name="opponent" value="FemaleOP" /><img
+            class="normal"
+            src="girl_normal.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </form>
+  </body>
 </html>
