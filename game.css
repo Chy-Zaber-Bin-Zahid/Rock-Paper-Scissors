@@ -86,10 +86,21 @@ section{
   align-items: center;
 }
 
+.bot-align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid silver;
+  width: 20%;
+  background-color: orange;
+  padding: .3em 0em .3em 0em;
+}
+
 .three-hand{
   border-radius: 100%;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
+  margin-right: .5em;
 }
 
 /* right part */
