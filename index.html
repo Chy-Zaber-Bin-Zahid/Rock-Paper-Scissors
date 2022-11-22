@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form class="form">
+    <form id="form" class="form">
       <div class="heading"><h1>Welcome to Rock Paper Scissors Game</h1></div>
       <div class="align">
         <div class="name in">
@@ -45,13 +45,82 @@
             </div>
           </div>
           <div class="button">
-            <a href="game.html"
-              ><button id="start" type="button" class="dark">Start</button
-            ></a>
+            <button id="start" type="button" class="dark">Start</button>
           </div>
         </div>
       </div>
     </form>
+    
+    <article id="art">
+      <!-- top part -->
+      <div class="point-both">
+        <div class="point">
+          <h1>Score</h1>
+          <input type="text" />
+        </div>
+        <div class="point">
+          <h1>Score</h1>
+          <input type="text" />
+        </div>
+      </div>
+      <!-- bottom part -->
+      <div class="game">
+        <!-- left side -->
+        <div class="same left-main">
+          <div class="left">
+            <div class="left-same">
+              <img class="profile" src="Male_profile.jpg" alt="" />
+              <h3 id="player">No Name</h3>
+            </div>
+            <div class="left-same selected">
+              <img class="three-hand img-selected" src="rock.png" alt="" />
+              <h3>rock</h3>
+            </div>
+          </div>
+
+          <!-- left bottom -->
+          <div class="bottom-left">
+            <button class="sec-btn">
+              <div class="bot-align">
+                <img class="three-hand img-selected" src="rock.png" alt="" />
+                <h3>Rock</h3>
+              </div>
+            </button>
+
+            <button>
+              <div class="bot-align">
+                <img class="three-hand" src="paper.png" alt="" />
+                <h3>Paper</h3>
+              </div>
+            </button>
+
+            <button>
+              <div class="bot-align">
+                <img class="three-hand" src="scissors.png" alt="" />
+                <h3>Scissor</h3>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- right side -->
+        <div class="same right">
+          <div class="right-same selected">
+            <img class="three-hand" src="paper.png" alt="" />
+            <h3>paper</h3>
+          </div>
+          <div class="right-same">
+            <img class="profile_anime" src="girl_normal.png" alt="" />
+            <h3>No Name</h3>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <h1>Result</h1>
+      <input type="text" />
+    </footer>
 
     <script type="module" src="script.js"></script>
   </body>

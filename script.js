@@ -50,12 +50,15 @@ let check = function () {
   }
 };
 setInterval(check, 100);
+
 // ##############Last Page Part##############
 // player part
 document.getElementById("start").addEventListener("click", function () {
   let checkPlayerProfile = function () {
-    console.log(1);
+    document.getElementById("form").style.display = "none";
+    document.getElementById("art").style.display = "block";
   };
-
-  setInterval(checkPlayerProfile, 100);
+  checkPlayerProfile();
 });
+
+document.getElementById("player").innerText = namePlayer;

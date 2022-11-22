@@ -5,13 +5,12 @@
   box-sizing: border-box;
 }
 
-
 html {
   font-size: 110%;
   height: 100vh;
 }
 
-body{
+body {
   background-image: url(background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,6 +19,7 @@ body{
 .form {
   padding: 1em;
   height: 100%;
+  display: block;
 }
 
 .heading {
@@ -34,7 +34,7 @@ body{
 }
 
 /* align part */
-.align{
+.align {
   height: 100%;
 }
 
@@ -46,7 +46,7 @@ body{
   align-items: center;
   border: 2px solid black;
   background-color: rgb(170, 165, 165);
-  margin: auto;;
+  margin: auto;
   width: 35%;
   margin-top: 1em;
   height: 100%;
@@ -60,55 +60,212 @@ body{
   text-align: center;
 }
 
-.enter-name, h3, input{
-  padding: .2em;
+.enter-name,
+h3,
+input {
+  padding: 0.2em;
 }
 
 #enter-name-inp {
   width: 100%;
   border-radius: 0;
-  padding: .2em .2em .2em .2em;
+  padding: 0.2em 0.2em 0.2em 0.2em;
   background-color: rgb(255, 255, 255);
   font-family: sans-serif;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 
 /* gender part */
-.gender-between{
+.gender-between {
   display: flex;
   justify-content: space-evenly;
 }
 
 /* opponent part */
-.opponent-between{
+.opponent-between {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.opponent-between input{
+.opponent-between input {
   margin: 1em;
 }
 
-.normal{
+.normal {
   width: 100px;
   height: 120px;
   margin-left: 1em;
 }
 
 /* button */
-.dark{
-  padding: .5em 1.5em;
+.dark {
+  padding: 0.5em 1.5em;
   background-color: black;
   border-radius: 5px;
   border: none;
   color: white;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
 }
 
 .dark:hover {
   cursor: pointer;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  display: none;
+}
+
+/* point part */
+.point-both {
+  display: flex;
+}
+
+.point {
+  text-align: center;
+  background-color: gray;
+  margin: auto;
+  width: 7rem;
+}
+
+.point input {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 0.5em 0em 0.5em 0em;
+  width: 100%;
+}
+
+/* game part */
+.game {
+  display: flex;
+  background-color: gray;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.same {
+  width: 50%;
+  height: 100%;
+}
+
+/* left part */
+.left-main {
+  display: flex;
+  flex-direction: column;
+  border-right: 3px dashed black;
+}
+
+.left {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.left-same {
+  width: 50%;
+  text-align: center;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+/* bottom part */
+.bottom-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bot-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.3em 0em 0.3em 0em;
+}
+
+.three-hand {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5em;
+}
+
+.sec-btn {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  border: 2px solid silver;
+}
+
+.sec-btn:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+/* right part */
+.right {
+  display: flex;
+}
+
+.right-same {
+  width: 50%;
+  text-align: center;
+}
+
+.profile_anime {
+  width: 140px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 20%;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  border: 2px solid silver;
+}
+
+.img-selected {
+  margin: 0;
+}
+
+/* footer part */
+footer {
+  text-align: center;
+  background-color: gray;
+  width: 30%;
+  margin: 1.5em auto;
+  display: none;
+}
+
+footer input {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 0.5em 0em 0.5em 0em;
+  width: 100%;
 }
