@@ -6,7 +6,7 @@ let namePlayer = document.getElementById("enter-name-inp").value;
 let checkName = function () {
   if (namePlayer === "") {
     namePlayer = "No Name";
-  }else{
+  } else {
     namePlayer = document.getElementById("enter-name-inp").value;
   }
 };
@@ -27,8 +27,6 @@ let findSelected = () => {
 
 setInterval(findSelected, 100);
 
-console.log(gender);
-
 // opponent part
 let opponent = "";
 
@@ -43,8 +41,6 @@ let findSelectedOp = () => {
 
 setInterval(findSelectedOp, 100);
 
-console.log(opponent);
-
 // button part
 let check = function () {
   if (gender === "" || opponent === "") {
@@ -54,5 +50,12 @@ let check = function () {
   }
 };
 setInterval(check, 100);
-
 // ##############Last Page Part##############
+// player part
+document.getElementById("start").addEventListener("click", function () {
+  let checkPlayerProfile = function () {
+    console.log(1);
+  };
+
+  setInterval(checkPlayerProfile, 100);
+});
