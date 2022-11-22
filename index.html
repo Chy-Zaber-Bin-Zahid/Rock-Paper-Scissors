@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scrissore Game</title>
-    <link rel="shortcut icon" href="faviconBrowser.png" type="image/x-icon">
+    <title>Rock Paper Scissore Game</title>
+    <link rel="shortcut icon" href="faviconBrowser.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,26 +18,26 @@
             <h3>Enter Your Name</h3>
             <input id="enter-name-inp" type="text" required />
           </div>
-  
+
           <!-- gender part -->
           <div class="gender in">
             <h3>Select Your Gender</h3>
             <div class="gender-between">
-              <input id="male" type="radio" name="gender" value="Male" />Male
+              <input type="radio" name="gender" value="Male" />Male
               <input type="radio" name="gender" value="Female" />Female
             </div>
           </div>
-  
+
           <!-- opponent part -->
           <div class="opponent in">
             <h3>Select Your Opponent</h3>
             <div class="opponent-between">
-              <input type="radio" name="opponent" value="MaleOP" />Hitoshi<img
+              <input type="radio" name="opponent" value="Hitoshi" />Hitoshi<img
                 class="normal"
                 src="boy_normal.png"
                 alt=""
               />
-              <input type="radio" name="opponent" value="FemaleOP" />Mikasa<img
+              <input type="radio" name="opponent" value="Mikasa" />Mikasa<img
                 class="normal"
                 src="girl_normal.png"
                 alt=""
@@ -45,7 +45,9 @@
             </div>
           </div>
           <div class="button">
-            <button type="button" class="dark"><a href="game.html">Start</a></button>
+            <a href="game.html"
+              ><button id="start" type="button" class="dark">Start</button
+            ></a>
           </div>
         </div>
       </div>
