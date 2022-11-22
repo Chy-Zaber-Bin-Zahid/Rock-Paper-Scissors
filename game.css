@@ -18,18 +18,21 @@ body{
 }
 
 section{
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   margin-top: 3em;
 }
 
 /* point part */
+.point-both{
+  display: flex;
+}
+
 .point{
   text-align: center;
   background-color: gray;
   margin: auto;
-  width: 10rem;
+  width: 7rem;
 }
 
 .point input{
@@ -90,9 +93,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid silver;
-  width: 20%;
-  background-color: orange;
+  width: 100%;
   padding: .3em 0em .3em 0em;
 }
 
@@ -101,6 +102,20 @@ section{
   width: 40px;
   height: 40px;
   margin-right: .5em;
+}
+
+button{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  border: 2px solid silver;
+}
+
+button:hover {
+  background-color: orange;
+  cursor: pointer;
 }
 
 /* right part */
@@ -130,4 +145,27 @@ section{
   color: white;
   padding: .5em;
   border: 2px solid silver;
+}
+
+.img-selected{
+  margin: 0;
+}
+
+/* footer part */
+footer{
+  text-align: center;
+  background-color: gray;
+  width: 30%;
+  margin: 1.5em auto;
+}
+
+footer input{
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: .5em 0em .5em 0em;
+  width: 100%;
 }

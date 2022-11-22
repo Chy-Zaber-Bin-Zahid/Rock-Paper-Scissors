@@ -10,9 +10,15 @@
   <body>
     <section>
       <!-- top part -->
-      <div class="point">
-        <h1>Score</h1>
-        <input type="text" />
+      <div class="point-both">
+        <div class="point">
+          <h1>Score</h1>
+          <input type="text" />
+        </div>
+        <div class="point">
+          <h1>Score</h1>
+          <input type="text" />
+        </div>
       </div>
       <!-- bottom part -->
       <div class="game">
@@ -24,25 +30,33 @@
               <h3>No Name</h3>
             </div>
             <div class="left-same selected">
-              <img class="three-hand" src="rock.png" alt="" />
+              <img class="three-hand img-selected" src="rock.png" alt="" />
               <h3>rock</h3>
             </div>
           </div>
 
           <!-- left bottom -->
           <div class="bottom-left">
-            <div class="bot-align">
-              <img class="three-hand" src="rock.png" alt="">
-            <h3>Rock</h3>
-            </div>
-            <div class="bot-align">
-              <img class="three-hand" src="paper.png" alt="">
-            <h3>Paper</h3>
-            </div>
-            <div class="bot-align">
-              <img class="three-hand" src="scissors.png" alt="">
-            <h3>Scissor</h3>
-            </div>
+            <button>
+              <div class="bot-align">
+                <img class="three-hand img-selected" src="rock.png" alt="" />
+                <h3>Rock</h3>
+              </div>
+            </button>
+
+            <button>
+              <div class="bot-align">
+                <img class="three-hand" src="paper.png" alt="" />
+                <h3>Paper</h3>
+              </div>
+            </button>
+
+            <button>
+              <div class="bot-align">
+                <img class="three-hand" src="scissors.png" alt="" />
+                <h3>Scissor</h3>
+              </div>
+            </button>
           </div>
         </div>
 
@@ -59,5 +73,10 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <h1>Result</h1>
+      <input type="text" />
+    </footer>
   </body>
 </html>
