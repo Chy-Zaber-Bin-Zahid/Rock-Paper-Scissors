@@ -16,7 +16,7 @@
           <!-- name part -->
           <div class="enter-name">
             <h3>Enter Your Name</h3>
-            <input id="enter-name-inp" type="text" required />
+            <input placeholder="Name" id="enter-name-inp" type="text" required />
           </div>
 
           <!-- gender part -->
@@ -51,16 +51,24 @@
       </div>
     </form>
     
+    <!-- play again part -->
+    <section id="again" class="again">
+      <button onclick="location.href='index.html'" type="button" class="again-btn">
+        <h2>Play Again</h2>
+      </button>
+    </section>
+
+    <!-- second page -->
     <article id="art">
       <!-- top part -->
       <div class="point-both">
         <div class="point">
           <h1>Score</h1>
-          <input type="text" />
+          <h2 id="player-score">0</h2>
         </div>
         <div class="point">
           <h1>Score</h1>
-          <input type="text" />
+          <h2 id="comp-score">0</h2>
         </div>
       </div>
       <!-- bottom part -->
@@ -73,28 +81,28 @@
               <h3 id="player">No Name</h3>
             </div>
             <div class="left-same selected">
-              <img class="three-hand img-selected" src="rock.png" alt="" />
-              <h3>rock</h3>
+              <img id="leftShow" class="three-hand img-selected" src="" alt="" />
+              <h3 id="leftTitle"></h3>
             </div>
           </div>
 
           <!-- left bottom -->
-          <div class="bottom-left">
-            <button class="sec-btn">
+          <div id="bottom-btn" class="bottom-left">
+            <button id="rock" class="sec-btn">
               <div class="bot-align">
                 <img class="three-hand img-selected" src="rock.png" alt="" />
                 <h3>Rock</h3>
               </div>
             </button>
 
-            <button>
+            <button id="paper" class="sec-btn">
               <div class="bot-align">
                 <img class="three-hand" src="paper.png" alt="" />
                 <h3>Paper</h3>
               </div>
             </button>
 
-            <button>
+            <button id="scissor" class="sec-btn">
               <div class="bot-align">
                 <img class="three-hand" src="scissors.png" alt="" />
                 <h3>Scissor</h3>
@@ -106,20 +114,20 @@
         <!-- right side -->
         <div class="same right">
           <div class="right-same selected">
-            <img class="three-hand" src="paper.png" alt="" />
-            <h3>paper</h3>
+            <img id="rightShow" class="three-hand img-selected" src="" alt="" />
+            <h3 id="rightTitle"></h3>
           </div>
           <div class="right-same">
-            <img id="computer-pic" class="profile_anime" src="girl_normal.png" alt="" />
+            <img id="computer-pic" class="profile_anime" src="" alt="" />
             <h3 id="com-name">No Name</h3>
           </div>
         </div>
       </div>
     </article>
 
-    <footer>
+    <footer id="foot">
       <h1>Result</h1>
-      <input type="text" />
+      <h2 id="result">Player Who Score 10 first Wins!</h2>
     </footer>
 
     <script type="module" src="script.js"></script>
