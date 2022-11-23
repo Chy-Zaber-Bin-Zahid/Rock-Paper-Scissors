@@ -61,9 +61,9 @@ document.getElementById("start").addEventListener("click", function () {
     document.getElementById("again").style.display = "block";
   };
 
-  if (namePlayer !== ""){
+  if (namePlayer !== "") {
     document.getElementById("player").innerText = namePlayer;
-  } else{
+  } else {
     document.getElementById("player").innerText = "Player";
   }
 
@@ -77,18 +77,65 @@ document.getElementById("start").addEventListener("click", function () {
     document.getElementById("computer-pic").src = "boy_normal.png";
   }
 
-  // score part
-  document.getElementById("player-score").value = 0;
-  document.getElementById("comp-score").value = 0;
-
-  // player select part
-  for (let index = 0; index < document.querySelectorAll(".sec-btn").length; index++) {
-    let element = document.querySelectorAll(".sec-btn")[index];
-    
-    
-  }
-
-
-
   checkPlayerProfile();
+});
+
+// player select part
+let choose = function (item) {
+  let leftImage = document.getElementById("leftShow");
+  let leftTitle = document.getElementById("leftTitle");
+  let rightImage = document.getElementById("rightShow");
+  let rightTitle = document.getElementById("rightTitle");
+
+  let images = ["rock.png", "paper.png", "scissors.png"];
+  let random = Math.floor(Math.random() * images.length);
+
+  if (item === "rock") {
+    leftImage.src = "rock.png";
+    leftTitle.innerText = "Rock";
+    rightImage.src = images[random];
+    if (rightImage.src === "rock.png") {
+      rightTitle.innerText = "Rock";
+    } else if (rightImage.src === "paper.png") {
+      rightTitle.innerText = "Paper";
+    } else {
+      rightTitle.innerText = "Scissor";
+    }
+  } else if (item === "paper") {
+    leftImage.src = "paper.png";
+    leftTitle.innerText = "Paper";
+    rightImage.src = images[random];
+    if (rightImage.src === "rock.png") {
+      rightTitle.innerText = "Rock";
+    } else if (rightImage.src === "paper.png") {
+      rightTitle.innerText = "Paper";
+    } else {
+      rightTitle.innerText = "Scissor";
+    }
+  } else {
+    leftImage.src = "scissors.png";
+    leftTitle.innerText = "Scissor";
+    rightImage.src = images[random];
+    if (rightImage.src === "rock.png") {
+      rightTitle.innerText = "Rock";
+    } else if (rightImage.src === "paper.png") {
+      rightTitle.innerText = "Paper";
+    } else {
+      rightTitle.innerText = "Scissor";
+    }
+  }
+};
+
+let rock = document.getElementById("rock");
+let paper = document.getElementById("paper");
+let scissor = document.getElementById("scissor");
+
+rock.addEventListener("click", function () {
+  choose("rock");
+});
+paper.addEventListener("click", function () {
+  choose("paper");
+});
+scissor.addEventListener("click", function () {
+  choose("scissor");
 });
