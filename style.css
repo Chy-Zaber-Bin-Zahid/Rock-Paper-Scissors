@@ -230,6 +230,7 @@ article {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  visibility: hidden;
 }
 
 .bot-align {

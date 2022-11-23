@@ -59,6 +59,7 @@ document.getElementById("start").addEventListener("click", function () {
     document.getElementById("art").style.display = "block";
     document.getElementById("foot").style.display = "block";
     document.getElementById("again").style.display = "block";
+    document.getElementById("bottom-btn").style.visibility = "visible";
   };
 
   if (namePlayer !== "") {
@@ -85,7 +86,7 @@ document.getElementById("start").addEventListener("click", function () {
 // player select part
 let choose = function (item) {
   // if (document.getElementById("player-score").innerText !== "10" || document.getElementById("player-score").innerText !== "10") {
-    
+
   // }
   if (
     document.getElementById("computer-pic").src ===
@@ -197,7 +198,7 @@ let choose = function (item) {
     if (Number(c) < 11 && Number(p) < 11) {
       scoreComp.innerText = c;
     }
-    
+
     if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
       compFace.src = "http://127.0.0.1:5500/girl_happy.png";
       happyFace();
@@ -291,23 +292,32 @@ let paper = document.getElementById("paper");
 let scissor = document.getElementById("scissor");
 
 rock.addEventListener("click", function () {
-  if (document.getElementById("player-score").innerText !== '10' || document.getElementById("comp-score").innerText !== '10'){
+  if (
+    document.getElementById("player-score").innerText !== "10" ||
+    document.getElementById("comp-score").innerText !== "10"
+  ) {
     choose("rock");
-  } else{
+  } else {
     console.log(1);
   }
 });
 paper.addEventListener("click", function () {
-  if (document.getElementById("player-score").innerText !== '10' || document.getElementById("comp-score").innerText !== '10'){
+  if (
+    document.getElementById("player-score").innerText !== "10" ||
+    document.getElementById("comp-score").innerText !== "10"
+  ) {
     choose("paper");
-  }else{
+  } else {
     console.log(1);
   }
 });
 scissor.addEventListener("click", function () {
-  if (document.getElementById("player-score").innerText !== '10' || document.getElementById("comp-score").innerText !== '10'){
+  if (
+    document.getElementById("player-score").innerText !== "10" ||
+    document.getElementById("comp-score").innerText !== "10"
+  ) {
     choose("scissor");
-  }else{
+  } else {
     console.log(1);
   }
 });
@@ -315,42 +325,65 @@ scissor.addEventListener("click", function () {
 let condition = function () {
   if (document.getElementById("player-score").innerText === "10") {
     document.getElementById("result").innerText = "🎉🎊 You Won! 🎊🎉";
-    if (document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_shocked.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_happy.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_angry.png"){
+    if (
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/girl_shocked.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/girl_happy.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/girl_angry.png"
+    ) {
       document.getElementById("computer-pic").src =
-      "http://127.0.0.1:5500/girl_sad.png"
-    } else if (document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_shocked.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_happy.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_angry.png"){
+        "http://127.0.0.1:5500/girl_sad.png";
+    } else if (
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/boy_shocked.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/boy_happy.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/boy_angry.png"
+    ) {
       document.getElementById("computer-pic").src =
-      "http://127.0.0.1:5500/boy_sad.png"
+        "http://127.0.0.1:5500/boy_sad.png";
     }
   } else if (document.getElementById("comp-score").innerText === "10") {
-    if(document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_shocked.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_happy.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_angry.png"){
-      document.getElementById("computer-pic").src = "http://127.0.0.1:5500/girl_victory.png"
+    if (
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/girl_shocked.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/girl_happy.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/girl_angry.png"
+    ) {
+      document.getElementById("computer-pic").src =
+        "http://127.0.0.1:5500/girl_victory.png";
       document.getElementById("result").innerText = "🎉🎊 Mikasa Won! 🎊🎉";
-    } else if(document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_shocked.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_happy.png" ||
-  document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_angry.png"){
-      document.getElementById("computer-pic").src = "http://127.0.0.1:5500/boy_victory.png"
+      document.getElementById;
+    } else if (
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/boy_shocked.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/boy_happy.png" ||
+      document.getElementById("computer-pic").src ===
+        "http://127.0.0.1:5500/boy_angry.png"
+    ) {
+      document.getElementById("computer-pic").src =
+        "http://127.0.0.1:5500/boy_victory.png";
       document.getElementById("result").innerText = "🎉🎊 Hitoshi Won! 🎊🎉";
     }
   }
 };
 
 setInterval(condition, 100);
+
+let hide = function () {
+  console.log(1);
+  if (
+    document.getElementById("player-score").innerText === "10" ||
+    document.getElementById("comp-score").innerText === "10"
+  ) {
+    document.getElementById("bottom-btn").style.visibility = "hidden";
+  }
+};
+
+setInterval(hide, 100);
