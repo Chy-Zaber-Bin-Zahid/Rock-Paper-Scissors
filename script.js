@@ -84,19 +84,26 @@ document.getElementById("start").addEventListener("click", function () {
 
 // player select part
 let choose = function (item) {
+  // if (document.getElementById("player-score").innerText !== "10" || document.getElementById("player-score").innerText !== "10") {
+    
+  // }
   if (
     document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_shocked.png" || document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_happy.png" || document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/girl_angry.png"
+      "http://127.0.0.1:5500/girl_shocked.png" ||
+    document.getElementById("computer-pic").src ===
+      "http://127.0.0.1:5500/girl_happy.png" ||
+    document.getElementById("computer-pic").src ===
+      "http://127.0.0.1:5500/girl_angry.png"
   ) {
     document.getElementById("computer-pic").src =
       "http://127.0.0.1:5500/girl_normal.png";
   } else if (
     document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_shocked.png" || document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_happy.png" || document.getElementById("computer-pic").src ===
-    "http://127.0.0.1:5500/boy_angry.png"
+      "http://127.0.0.1:5500/boy_shocked.png" ||
+    document.getElementById("computer-pic").src ===
+      "http://127.0.0.1:5500/boy_happy.png" ||
+    document.getElementById("computer-pic").src ===
+      "http://127.0.0.1:5500/boy_angry.png"
   ) {
     document.getElementById("computer-pic").src =
       "http://127.0.0.1:5500/boy_normal.png";
@@ -151,17 +158,19 @@ let choose = function (item) {
   let compFace = document.getElementById("computer-pic");
   let resultShow = document.getElementById("result");
 
-  let res = function () {
-    resultShow.innerText = "Choose A Move";
-  };
-
   let happyFace = function () {
     if (compFace.src === "http://127.0.0.1:5500/boy_happy.png") {
       resultShow.innerText = "Hitoshi Got +1";
-      setTimeout(res, 5000);
     } else if (compFace.src === "http://127.0.0.1:5500/girl_happy.png") {
       resultShow.innerText = "Mikasa Got +1";
-      setTimeout(res, 5000);
+    }
+  };
+
+  let angryFace = function () {
+    if (compFace.src === "http://127.0.0.1:5500/boy_angry.png") {
+      resultShow.innerText = "You Got +1";
+    } else if (compFace.src === "http://127.0.0.1:5500/girl_angry.png") {
+      resultShow.innerText = "You Got +1";
     }
   };
 
@@ -180,13 +189,15 @@ let choose = function (item) {
         "http://127.0.0.1:5500/boy_shocked.png";
     }
     resultShow.innerText = "Draw No Point";
-    setTimeout(res, 3000);
   } else if (
     leftTitle.innerText === "Rock" &&
     rightTitle.innerText === "Paper"
   ) {
-    scoreComp.innerText = c + 1;
     c++;
+    if (Number(c) < 11 && Number(p) < 11) {
+      scoreComp.innerText = c;
+    }
+    
     if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
       compFace.src = "http://127.0.0.1:5500/girl_happy.png";
       happyFace();
@@ -198,8 +209,11 @@ let choose = function (item) {
     leftTitle.innerText === "Paper" &&
     rightTitle.innerText === "Scissor"
   ) {
-    scoreComp.innerText = c + 1;
     c++;
+    if (Number(c) < 11 && Number(p) < 11) {
+      scoreComp.innerText = c;
+    }
+
     if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
       compFace.src = "http://127.0.0.1:5500/girl_happy.png";
       happyFace();
@@ -211,8 +225,10 @@ let choose = function (item) {
     leftTitle.innerText === "Scissor" &&
     rightTitle.innerText === "Rock"
   ) {
-    scoreComp.innerText = c + 1;
     c++;
+    if (Number(c) < 11 && Number(p) < 11) {
+      scoreComp.innerText = c;
+    }
     if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
       compFace.src = "http://127.0.0.1:5500/girl_happy.png";
       happyFace();
@@ -224,20 +240,47 @@ let choose = function (item) {
     leftTitle.innerText === "Scissor" &&
     rightTitle.innerText === "Paper"
   ) {
-    scorePlayer.innerText = p + 1;
     p++;
+    if (Number(p) < 11 && Number(c) < 11) {
+      scorePlayer.innerText = p;
+    }
+    if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/girl_angry.png";
+      angryFace();
+    } else if (compFace.src === "http://127.0.0.1:5500/boy_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/boy_angry.png";
+      angryFace();
+    }
   } else if (
     leftTitle.innerText === "Rock" &&
     rightTitle.innerText === "Scissor"
   ) {
-    scorePlayer.innerText = p + 1;
     p++;
+    if (Number(p) < 11 && Number(c) < 11) {
+      scorePlayer.innerText = p;
+    }
+    if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/girl_angry.png";
+      angryFace();
+    } else if (compFace.src === "http://127.0.0.1:5500/boy_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/boy_angry.png";
+      angryFace();
+    }
   } else if (
     leftTitle.innerText === "Paper" &&
     rightTitle.innerText === "Rock"
   ) {
-    scorePlayer.innerText = p + 1;
     p++;
+    if (Number(p) < 11 && Number(c) < 11) {
+      scorePlayer.innerText = p;
+    }
+    if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/girl_angry.png";
+      angryFace();
+    } else if (compFace.src === "http://127.0.0.1:5500/boy_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/boy_angry.png";
+      angryFace();
+    }
   }
 };
 
@@ -248,11 +291,66 @@ let paper = document.getElementById("paper");
 let scissor = document.getElementById("scissor");
 
 rock.addEventListener("click", function () {
-  choose("rock");
+  if (document.getElementById("player-score").innerText !== '10' || document.getElementById("comp-score").innerText !== '10'){
+    choose("rock");
+  } else{
+    console.log(1);
+  }
 });
 paper.addEventListener("click", function () {
-  choose("paper");
+  if (document.getElementById("player-score").innerText !== '10' || document.getElementById("comp-score").innerText !== '10'){
+    choose("paper");
+  }else{
+    console.log(1);
+  }
 });
 scissor.addEventListener("click", function () {
-  choose("scissor");
+  if (document.getElementById("player-score").innerText !== '10' || document.getElementById("comp-score").innerText !== '10'){
+    choose("scissor");
+  }else{
+    console.log(1);
+  }
 });
+
+let condition = function () {
+  if (document.getElementById("player-score").innerText === "10") {
+    document.getElementById("result").innerText = "🎉🎊 You Won! 🎊🎉";
+    if (document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_shocked.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_happy.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_angry.png"){
+      document.getElementById("computer-pic").src =
+      "http://127.0.0.1:5500/girl_sad.png"
+    } else if (document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_shocked.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_happy.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_angry.png"){
+      document.getElementById("computer-pic").src =
+      "http://127.0.0.1:5500/boy_sad.png"
+    }
+  } else if (document.getElementById("comp-score").innerText === "10") {
+    if(document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_shocked.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_happy.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_angry.png"){
+      document.getElementById("computer-pic").src = "http://127.0.0.1:5500/girl_victory.png"
+      document.getElementById("result").innerText = "🎉🎊 Mikasa Won! 🎊🎉";
+    } else if(document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_shocked.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_happy.png" ||
+  document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_angry.png"){
+      document.getElementById("computer-pic").src = "http://127.0.0.1:5500/boy_victory.png"
+      document.getElementById("result").innerText = "🎉🎊 Hitoshi Won! 🎊🎉";
+    }
+  }
+};
+
+setInterval(condition, 100);
