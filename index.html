@@ -51,16 +51,24 @@
       </div>
     </form>
     
+    <!-- play again part -->
+    <section id="again" class="again">
+      <button class="again-btn">
+        <a href="index.html">Play Again</a>
+      </button>
+    </section>
+
+    <!-- second page -->
     <article id="art">
       <!-- top part -->
       <div class="point-both">
         <div class="point">
           <h1>Score</h1>
-          <input type="text" />
+          <input id="player-score" type="text" />
         </div>
         <div class="point">
           <h1>Score</h1>
-          <input type="text" />
+          <input id="comp-score" type="text" />
         </div>
       </div>
       <!-- bottom part -->
@@ -73,8 +81,8 @@
               <h3 id="player">No Name</h3>
             </div>
             <div class="left-same selected">
-              <img class="three-hand img-selected" src="rock.png" alt="" />
-              <h3>rock</h3>
+              <img class="three-hand img-selected" src="" alt="" />
+              <h3></h3>
             </div>
           </div>
 
@@ -87,14 +95,14 @@
               </div>
             </button>
 
-            <button>
+            <button class="sec-btn">
               <div class="bot-align">
                 <img class="three-hand" src="paper.png" alt="" />
                 <h3>Paper</h3>
               </div>
             </button>
 
-            <button>
+            <button class="sec-btn">
               <div class="bot-align">
                 <img class="three-hand" src="scissors.png" alt="" />
                 <h3>Scissor</h3>
@@ -106,8 +114,8 @@
         <!-- right side -->
         <div class="same right">
           <div class="right-same selected">
-            <img class="three-hand" src="paper.png" alt="" />
-            <h3>paper</h3>
+            <img class="three-hand img-selected" src="" alt="" />
+            <h3></h3>
           </div>
           <div class="right-same">
             <img id="computer-pic" class="profile_anime" src="girl_normal.png" alt="" />
@@ -117,7 +125,7 @@
       </div>
     </article>
 
-    <footer>
+    <footer id="foot">
       <h1>Result</h1>
       <input type="text" />
     </footer>

@@ -48,7 +48,6 @@ let check = function () {
   } else {
     document.getElementById("start").disabled = false;
   }
-  console.log(namePlayer, gender, opponent);
 };
 setInterval(check, 100);
 
@@ -58,8 +57,15 @@ document.getElementById("start").addEventListener("click", function () {
   let checkPlayerProfile = function () {
     document.getElementById("form").style.display = "none";
     document.getElementById("art").style.display = "block";
+    document.getElementById("foot").style.display = "block";
+    document.getElementById("again").style.display = "block";
   };
-  document.getElementById("player").innerText = namePlayer;
+
+  if (namePlayer !== ""){
+    document.getElementById("player").innerText = namePlayer;
+  } else{
+    document.getElementById("player").innerText = "Player";
+  }
 
   if (gender === "Female") {
     document.getElementById("player-pic").src = "Female_profile.jpg";
@@ -70,6 +76,19 @@ document.getElementById("start").addEventListener("click", function () {
   if (opponent === "Hitoshi") {
     document.getElementById("computer-pic").src = "boy_normal.png";
   }
+
+  // score part
+  document.getElementById("player-score").value = 0;
+  document.getElementById("comp-score").value = 0;
+
+  // player select part
+  for (let index = 0; index < document.querySelectorAll(".sec-btn").length; index++) {
+    let element = document.querySelectorAll(".sec-btn")[index];
+    
+    
+  }
+
+
 
   checkPlayerProfile();
 });
