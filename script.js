@@ -75,6 +75,8 @@ document.getElementById("start").addEventListener("click", function () {
 
   if (opponent === "Hitoshi") {
     document.getElementById("computer-pic").src = "boy_normal.png";
+  } else {
+    document.getElementById("computer-pic").src = "girl_normal.png";
   }
 
   checkPlayerProfile();
@@ -82,6 +84,24 @@ document.getElementById("start").addEventListener("click", function () {
 
 // player select part
 let choose = function (item) {
+  if (
+    document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_shocked.png" || document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_happy.png" || document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/girl_angry.png"
+  ) {
+    document.getElementById("computer-pic").src =
+      "http://127.0.0.1:5500/girl_normal.png";
+  } else if (
+    document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_shocked.png" || document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_happy.png" || document.getElementById("computer-pic").src ===
+    "http://127.0.0.1:5500/boy_angry.png"
+  ) {
+    document.getElementById("computer-pic").src =
+      "http://127.0.0.1:5500/boy_normal.png";
+  }
+
   let leftImage = document.getElementById("leftShow");
   let leftTitle = document.getElementById("leftTitle");
   let rightImage = document.getElementById("rightShow");
@@ -94,9 +114,9 @@ let choose = function (item) {
     leftImage.src = "rock.png";
     leftTitle.innerText = "Rock";
     rightImage.src = images[random];
-    if (rightImage.src === "rock.png") {
+    if (rightImage.src === "http://127.0.0.1:5500/rock.png") {
       rightTitle.innerText = "Rock";
-    } else if (rightImage.src === "paper.png") {
+    } else if (rightImage.src === "http://127.0.0.1:5500/paper.png") {
       rightTitle.innerText = "Paper";
     } else {
       rightTitle.innerText = "Scissor";
@@ -105,9 +125,9 @@ let choose = function (item) {
     leftImage.src = "paper.png";
     leftTitle.innerText = "Paper";
     rightImage.src = images[random];
-    if (rightImage.src === "rock.png") {
+    if (rightImage.src === "http://127.0.0.1:5500/rock.png") {
       rightTitle.innerText = "Rock";
-    } else if (rightImage.src === "paper.png") {
+    } else if (rightImage.src === "http://127.0.0.1:5500/paper.png") {
       rightTitle.innerText = "Paper";
     } else {
       rightTitle.innerText = "Scissor";
@@ -116,16 +136,113 @@ let choose = function (item) {
     leftImage.src = "scissors.png";
     leftTitle.innerText = "Scissor";
     rightImage.src = images[random];
-    if (rightImage.src === "rock.png") {
+    if (rightImage.src === "http://127.0.0.1:5500/rock.png") {
       rightTitle.innerText = "Rock";
-    } else if (rightImage.src === "paper.png") {
+    } else if (rightImage.src === "http://127.0.0.1:5500/paper.png") {
       rightTitle.innerText = "Paper";
     } else {
       rightTitle.innerText = "Scissor";
     }
   }
+
+  // score part
+  let scorePlayer = document.getElementById("player-score");
+  let scoreComp = document.getElementById("comp-score");
+  let compFace = document.getElementById("computer-pic");
+  let resultShow = document.getElementById("result");
+
+  let res = function () {
+    resultShow.innerText = "Choose A Move";
+  };
+
+  let happyFace = function () {
+    if (compFace.src === "http://127.0.0.1:5500/boy_happy.png") {
+      resultShow.innerText = "Hitoshi Got +1";
+      setTimeout(res, 5000);
+    } else if (compFace.src === "http://127.0.0.1:5500/girl_happy.png") {
+      resultShow.innerText = "Mikasa Got +1";
+      setTimeout(res, 5000);
+    }
+  };
+
+  if (leftTitle.innerText === rightTitle.innerText) {
+    if (
+      document.getElementById("computer-pic").src ===
+      "http://127.0.0.1:5500/girl_normal.png"
+    ) {
+      document.getElementById("computer-pic").src =
+        "http://127.0.0.1:5500/girl_shocked.png";
+    } else if (
+      document.getElementById("computer-pic").src ===
+      "http://127.0.0.1:5500/boy_normal.png"
+    ) {
+      document.getElementById("computer-pic").src =
+        "http://127.0.0.1:5500/boy_shocked.png";
+    }
+    resultShow.innerText = "Draw No Point";
+    setTimeout(res, 3000);
+  } else if (
+    leftTitle.innerText === "Rock" &&
+    rightTitle.innerText === "Paper"
+  ) {
+    scoreComp.innerText = c + 1;
+    c++;
+    if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/girl_happy.png";
+      happyFace();
+    } else if (compFace.src === "http://127.0.0.1:5500/boy_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/boy_happy.png";
+      happyFace();
+    }
+  } else if (
+    leftTitle.innerText === "Paper" &&
+    rightTitle.innerText === "Scissor"
+  ) {
+    scoreComp.innerText = c + 1;
+    c++;
+    if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/girl_happy.png";
+      happyFace();
+    } else if (compFace.src === "http://127.0.0.1:5500/boy_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/boy_happy.png";
+      happyFace();
+    }
+  } else if (
+    leftTitle.innerText === "Scissor" &&
+    rightTitle.innerText === "Rock"
+  ) {
+    scoreComp.innerText = c + 1;
+    c++;
+    if (compFace.src === "http://127.0.0.1:5500/girl_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/girl_happy.png";
+      happyFace();
+    } else if (compFace.src === "http://127.0.0.1:5500/boy_normal.png") {
+      compFace.src = "http://127.0.0.1:5500/boy_happy.png";
+      happyFace();
+    }
+  } else if (
+    leftTitle.innerText === "Scissor" &&
+    rightTitle.innerText === "Paper"
+  ) {
+    scorePlayer.innerText = p + 1;
+    p++;
+  } else if (
+    leftTitle.innerText === "Rock" &&
+    rightTitle.innerText === "Scissor"
+  ) {
+    scorePlayer.innerText = p + 1;
+    p++;
+  } else if (
+    leftTitle.innerText === "Paper" &&
+    rightTitle.innerText === "Rock"
+  ) {
+    scorePlayer.innerText = p + 1;
+    p++;
+  }
 };
 
+let p = 0;
+let c = 0;
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissor = document.getElementById("scissor");
