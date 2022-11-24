@@ -386,4 +386,5 @@ let hide = function () {
   }
 };
 
+console.log(document.getElementById("computer-pic").src);
 setInterval(hide, 100);
