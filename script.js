@@ -1,4 +1,5 @@
 "use strict";
+let git = "https://chy-zaber-bin-zahid.github.io/Rock-Paper-Scissors/"
 // ##############First Page Part##############
 // name part
 let namePlayer = document.getElementById("enter-name-inp").value;
@@ -75,9 +76,9 @@ document.getElementById("start").addEventListener("click", function () {
   document.getElementById("com-name").innerText = opponent;
 
   if (opponent === "Hitoshi") {
-    document.getElementById("computer-pic").src = "boy_normal.png";
+    document.getElementById("computer-pic").src = (git+"boy_normal.png");
   } else {
-    document.getElementById("computer-pic").src = "girl_normal.png";
+    document.getElementById("computer-pic").src = (git+"girl_normal.png");
   }
 
   checkPlayerProfile();
@@ -90,24 +91,24 @@ let choose = function (item) {
   // }
   if (
     document.getElementById("computer-pic").src ===
-      "girl_shocked.png" ||
+      (git+"girl_shocked.png") ||
     document.getElementById("computer-pic").src ===
-      "girl_happy.png" ||
+      (git+"girl_happy.png") ||
     document.getElementById("computer-pic").src ===
-      "girl_angry.png"
+      (git+"girl_angry.png")
   ) {
     document.getElementById("computer-pic").src =
-      "girl_normal.png";
+      (git+"girl_normal.png");
   } else if (
     document.getElementById("computer-pic").src ===
-      "boy_shocked.png" ||
+      (git+"boy_shocked.png") ||
     document.getElementById("computer-pic").src ===
-      "boy_happy.png" ||
+      (git+"boy_happy.png") ||
     document.getElementById("computer-pic").src ===
-      "boy_angry.png"
+      (git+"boy_angry.png")
   ) {
     document.getElementById("computer-pic").src =
-      "boy_normal.png";
+      (git+"boy_normal.png");
   }
 
   let leftImage = document.getElementById("leftShow");
@@ -160,17 +161,17 @@ let choose = function (item) {
   let resultShow = document.getElementById("result");
 
   let happyFace = function () {
-    if (compFace.src === "boy_happy.png") {
+    if (compFace.src === (git+"boy_happy.png")) {
       resultShow.innerText = "Hitoshi Got +1";
-    } else if (compFace.src === "girl_happy.png") {
+    } else if (compFace.src === (git+"girl_happy.png")) {
       resultShow.innerText = "Mikasa Got +1";
     }
   };
 
   let angryFace = function () {
-    if (compFace.src === "boy_angry.png") {
+    if (compFace.src === (git+"boy_angry.png")) {
       resultShow.innerText = "You Got +1";
-    } else if (compFace.src === "girl_angry.png") {
+    } else if (compFace.src === (git+"girl_angry.png")) {
       resultShow.innerText = "You Got +1";
     }
   };
@@ -178,16 +179,16 @@ let choose = function (item) {
   if (leftTitle.innerText === rightTitle.innerText) {
     if (
       document.getElementById("computer-pic").src ===
-      "girl_normal.png"
+      (git+"girl_normal.png")
     ) {
       document.getElementById("computer-pic").src =
-        "girl_shocked.png";
+        (git+"girl_shocked.png");
     } else if (
       document.getElementById("computer-pic").src ===
-      "boy_normal.png"
+      (git+"boy_normal.png")
     ) {
       document.getElementById("computer-pic").src =
-        "boy_shocked.png";
+        (git+"boy_shocked.png");
     }
     resultShow.innerText = "Draw No Point";
   } else if (
@@ -199,11 +200,11 @@ let choose = function (item) {
       scoreComp.innerText = c;
     }
 
-    if (compFace.src === "girl_normal.png") {
-      compFace.src = "girl_happy.png";
+    if (compFace.src === (git+"girl_normal.png")) {
+      compFace.src = (git+"girl_happy.png");
       happyFace();
-    } else if (compFace.src === "boy_normal.png") {
-      compFace.src = "boy_happy.png";
+    } else if (compFace.src === (git+"boy_normal.png")) {
+      compFace.src = (git+"boy_happy.png");
       happyFace();
     }
   } else if (
@@ -215,11 +216,11 @@ let choose = function (item) {
       scoreComp.innerText = c;
     }
 
-    if (compFace.src === "girl_normal.png") {
-      compFace.src = "girl_happy.png";
+    if (compFace.src === (git+"girl_normal.png")) {
+      compFace.src = (git+"girl_happy.png");
       happyFace();
-    } else if (compFace.src === "boy_normal.png") {
-      compFace.src = "boy_happy.png";
+    } else if (compFace.src === (git+"boy_normal.png")) {
+      compFace.src = (git+"boy_happy.png");
       happyFace();
     }
   } else if (
@@ -230,11 +231,11 @@ let choose = function (item) {
     if (Number(c) < 11 && Number(p) < 11) {
       scoreComp.innerText = c;
     }
-    if (compFace.src === "girl_normal.png") {
-      compFace.src = "girl_happy.png";
+    if (compFace.src === (git+"girl_normal.png")) {
+      compFace.src = (git+"girl_happy.png");
       happyFace();
-    } else if (compFace.src === "boy_normal.png") {
-      compFace.src = "boy_happy.png";
+    } else if (compFace.src === (git+"boy_normal.png")) {
+      compFace.src = (git+"boy_happy.png");
       happyFace();
     }
   } else if (
@@ -245,11 +246,11 @@ let choose = function (item) {
     if (Number(p) < 11 && Number(c) < 11) {
       scorePlayer.innerText = p;
     }
-    if (compFace.src === "girl_normal.png") {
-      compFace.src = "girl_angry.png";
+    if (compFace.src === (git+"girl_normal.png")) {
+      compFace.src = (git+"girl_angry.png");
       angryFace();
-    } else if (compFace.src === "boy_normal.png") {
-      compFace.src = "boy_angry.png";
+    } else if (compFace.src === (git+"boy_normal.png")) {
+      compFace.src = (git+"boy_angry.png");
       angryFace();
     }
   } else if (
@@ -260,11 +261,11 @@ let choose = function (item) {
     if (Number(p) < 11 && Number(c) < 11) {
       scorePlayer.innerText = p;
     }
-    if (compFace.src === "girl_normal.png") {
-      compFace.src = "girl_angry.png";
+    if (compFace.src === (git+"girl_normal.png")) {
+      compFace.src = (git+"girl_angry.png");
       angryFace();
-    } else if (compFace.src === "boy_normal.png") {
-      compFace.src = "boy_angry.png";
+    } else if (compFace.src === (git+"boy_normal.png")) {
+      compFace.src = (git+"boy_angry.png");
       angryFace();
     }
   } else if (
@@ -275,11 +276,11 @@ let choose = function (item) {
     if (Number(p) < 11 && Number(c) < 11) {
       scorePlayer.innerText = p;
     }
-    if (compFace.src === "girl_normal.png") {
-      compFace.src = "girl_angry.png";
+    if (compFace.src === (git+"girl_normal.png")) {
+      compFace.src = (git+"girl_angry.png");
       angryFace();
-    } else if (compFace.src === "boy_normal.png") {
-      compFace.src = "boy_angry.png";
+    } else if (compFace.src === (git+"boy_normal.png")) {
+      compFace.src = (git+"boy_angry.png");
       angryFace();
     }
   }
@@ -297,8 +298,6 @@ rock.addEventListener("click", function () {
     document.getElementById("comp-score").innerText !== "10"
   ) {
     choose("rock");
-  } else {
-    console.log(1);
   }
 });
 paper.addEventListener("click", function () {
@@ -307,8 +306,6 @@ paper.addEventListener("click", function () {
     document.getElementById("comp-score").innerText !== "10"
   ) {
     choose("paper");
-  } else {
-    console.log(1);
   }
 });
 scissor.addEventListener("click", function () {
@@ -317,8 +314,6 @@ scissor.addEventListener("click", function () {
     document.getElementById("comp-score").innerText !== "10"
   ) {
     choose("scissor");
-  } else {
-    console.log(1);
   }
 });
 
@@ -327,48 +322,48 @@ let condition = function () {
     document.getElementById("result").innerText = "🎉🎊 You Won! 🎊🎉";
     if (
       document.getElementById("computer-pic").src ===
-        "girl_shocked.png" ||
+        (git+"girl_shocked.png") ||
       document.getElementById("computer-pic").src ===
-        "girl_happy.png" ||
+        (git+"girl_happy.png") ||
       document.getElementById("computer-pic").src ===
-        "girl_angry.png"
+        (git+"girl_angry.png")
     ) {
       document.getElementById("computer-pic").src =
-        "girl_sad.png";
+        git+"girl_sad.png";
     } else if (
       document.getElementById("computer-pic").src ===
-        "boy_shocked.png" ||
+        (git+"boy_shocked.png") ||
       document.getElementById("computer-pic").src ===
-        "boy_happy.png" ||
+        (git+"boy_happy.png") ||
       document.getElementById("computer-pic").src ===
-        "boy_angry.png"
+        (git+"boy_angry.png")
     ) {
       document.getElementById("computer-pic").src =
-        "boy_sad.png";
+        git+"boy_sad.png";
     }
   } else if (document.getElementById("comp-score").innerText === "10") {
     if (
       document.getElementById("computer-pic").src ===
-        "girl_shocked.png" ||
+        (git+"girl_shocked.png") ||
       document.getElementById("computer-pic").src ===
-        "girl_happy.png" ||
+        (git+"girl_happy.png") ||
       document.getElementById("computer-pic").src ===
-        "girl_angry.png"
+        (git+"girl_angry.png")
     ) {
       document.getElementById("computer-pic").src =
-        "girl_victory.png";
+        git+"girl_victory.png";
       document.getElementById("result").innerText = "🎉🎊 Mikasa Won! 🎊🎉";
       document.getElementById;
     } else if (
       document.getElementById("computer-pic").src ===
-        "boy_shocked.png" ||
+        (git+"boy_shocked.png") ||
       document.getElementById("computer-pic").src ===
-        "boy_happy.png" ||
+        (git+"boy_happy.png") ||
       document.getElementById("computer-pic").src ===
-        "boy_angry.png"
+        (git+"boy_angry.png")
     ) {
       document.getElementById("computer-pic").src =
-        "boy_victory.png";
+        git+"boy_victory.png";
       document.getElementById("result").innerText = "🎉🎊 Hitoshi Won! 🎊🎉";
     }
   }
@@ -386,5 +381,5 @@ let hide = function () {
   }
 };
 
-console.log(document.getElementById("computer-pic").src);
+
 setInterval(hide, 100);
