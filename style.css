@@ -14,6 +14,7 @@ html {
 @media (max-width: 446px) {
   html {
     font-size: 65%;
+    border: 1px solid red;
   }
 }
 
@@ -27,6 +28,7 @@ body {
   padding: 1em;
   height: 100%;
   display: block;
+  margin-top: 10em;
 }
 
 .heading {
@@ -119,7 +121,6 @@ input {
   justify-content: space-evenly;
 }
 
-
 .opponent-between input {
   margin: 1em;
 }
@@ -182,13 +183,14 @@ input {
 /* again part */
 .again {
   display: none;
-  padding: 1.5em 0em 0em 2.5em;
+  padding: 1.5em 0em 0em 3.7em;
 }
 
 @media (max-width: 446px) {
-  .again{
+  .again {
     text-align: center;
     padding: 1.5em 0em 0em 0em;
+    margin-top: 10em;
   }
 }
 
@@ -202,7 +204,7 @@ input {
 
 @media (max-width: 446px) {
   .again-btn {
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -217,10 +219,12 @@ article {
   flex-direction: column;
   margin-top: 1em;
   display: none;
+  margin: auto;
+  width: 90%;
 }
 
 @media (max-width: 446px) {
-  article{
+  article {
     width: 90%;
     margin: auto;
   }
@@ -240,9 +244,9 @@ article {
 }
 
 @media (max-width: 446px) {
-  .point{
+  .point {
     width: 4rem;
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -259,7 +263,7 @@ article {
 }
 
 @media (max-width: 446px) {
-  .point h2{
+  .point h2 {
     font-size: 1rem;
   }
 }
@@ -302,12 +306,12 @@ article {
 }
 
 @media (max-width: 446px) {
-  .profile{
-    width: 40px;
-    height: 40px;
+  .profile {
+    width: 60px;
+    height: 60px;
   }
 
-  #player{
+  #player {
     font-size: 1rem;
   }
 }
@@ -321,7 +325,7 @@ article {
 }
 
 @media (max-width: 446px) {
-  .bottom-left{
+  .bottom-left {
     flex-direction: column;
   }
 }
@@ -335,7 +339,7 @@ article {
 }
 
 @media (max-width: 446px) {
-  .sec-btn h3{
+  .sec-btn h3 {
     width: 50%;
   }
 }
@@ -348,7 +352,7 @@ article {
 }
 
 @media (max-width: 446px) {
-  .three-hand{
+  .three-hand {
     width: 15px;
     height: 15px;
   }
@@ -369,10 +373,10 @@ article {
 }
 
 @media (max-width: 446px) {
-  .sec-btn{
+  .sec-btn {
     width: 80%;
-    margin: .2em 0em;
-    font-size: .8rem;
+    margin: 0.2em 0em;
+    font-size: 0.8rem;
   }
 }
 
@@ -381,13 +385,10 @@ article {
   display: flex;
 }
 
-res-right
-
 .right-same {
   width: 50%;
   text-align: center;
 }
-
 
 
 .profile_anime {
@@ -398,16 +399,15 @@ res-right
 }
 
 @media (max-width: 446px) {
-  .profile_anime{
-    width: 40px;
-    height: 43px;
+  .profile_anime {
+    width: 60px;
+    height: 60px;
+    border: 3px solid silver;
   }
 
-  #com-name{
+  #com-name {
     font-size: 1rem;
   }
-
-
 }
 
 .selected {
@@ -424,15 +424,15 @@ res-right
 }
 
 @media (max-width: 446px) {
-  .selected{
-    padding-top: .7em;
+  .selected {
+    padding-top: 0.7em;
     height: 2.5em;
     width: 25%;
   }
-  #leftTitle{
-    font-size: .45rem;
+  #leftTitle {
+    font-size: 0.45rem;
   }
-  #leftShow{
+  #leftShow {
     width: 13px;
     height: 13px;
     margin: 0;
@@ -440,28 +440,23 @@ res-right
 }
 
 @media (max-width: 446px) {
-  .res-right{
-    margin-bottom: 1.9em;
-  }
-
-  #rightShow{
+  #rightShow {
     width: 13px;
     height: 13px;
     margin: 0;
   }
 
-  #rightTitle{
-    font-size: .45rem;
+  #rightTitle {
+    font-size: 0.45rem;
   }
 }
-
 
 .img-selected {
   margin: 0;
 }
 
 @media (max-width: 446px) {
-  .img-selected{
+  .img-selected {
     margin-right: 0.5em;
   }
 }
@@ -477,8 +472,8 @@ footer {
 }
 
 @media (max-width: 446px) {
-  footer{
-    font-size: .6rem;
+  footer {
+    font-size: 0.6rem;
     width: 40%;
   }
 }
@@ -496,8 +491,8 @@ footer h2 {
 }
 
 @media (max-width: 446px) {
-  footer h2{
-    font-size: .7rem;
+  footer h2 {
+    font-size: 0.7rem;
     padding: 0.5em 0.2em 0.5em 0.2em;
   }
 }
