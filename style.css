@@ -14,7 +14,6 @@ html {
 @media (max-width: 446px) {
   html {
     font-size: 65%;
-    border: 1px solid red;
   }
 }
 
@@ -28,7 +27,13 @@ body {
   padding: 1em;
   height: 100%;
   display: block;
-  margin-top: 10em;
+  margin-top: 1.5em;
+}
+
+@media (max-width: 446px) {
+  .form {
+    margin-top: 10em;
+  }
 }
 
 .heading {
@@ -48,8 +53,6 @@ body {
   }
 }
 
-@media (max-width: 446px) {
-}
 
 /* align part */
 .align {
