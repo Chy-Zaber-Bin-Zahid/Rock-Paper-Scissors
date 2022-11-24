@@ -379,5 +379,4 @@ let hide = function () {
     document.getElementById("bottom-btn").style.visibility = "hidden";
   }
 };
-console.log("hello");
 setInterval(hide, 100);
