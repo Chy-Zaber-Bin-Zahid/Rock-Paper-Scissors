@@ -425,6 +425,7 @@ res-right
 
 @media (max-width: 446px) {
   .selected{
+    padding-top: .7em;
     height: 2.5em;
     width: 25%;
   }
