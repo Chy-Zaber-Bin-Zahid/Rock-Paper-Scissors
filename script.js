@@ -123,9 +123,9 @@ let choose = function (item) {
     leftImage.src = "rock.png";
     leftTitle.innerText = "Rock";
     rightImage.src = images[random];
-    if (rightImage.src === "rock.png") {
+    if (rightImage.src === git+"rock.png") {
       rightTitle.innerText = "Rock";
-    } else if (rightImage.src === "paper.png") {
+    } else if (rightImage.src === git+"paper.png") {
       rightTitle.innerText = "Paper";
     } else {
       rightTitle.innerText = "Scissor";
@@ -134,9 +134,9 @@ let choose = function (item) {
     leftImage.src = "paper.png";
     leftTitle.innerText = "Paper";
     rightImage.src = images[random];
-    if (rightImage.src === "rock.png") {
+    if (rightImage.src === git+"rock.png") {
       rightTitle.innerText = "Rock";
-    } else if (rightImage.src === "paper.png") {
+    } else if (rightImage.src === git+"paper.png") {
       rightTitle.innerText = "Paper";
     } else {
       rightTitle.innerText = "Scissor";
@@ -145,9 +145,9 @@ let choose = function (item) {
     leftImage.src = "scissors.png";
     leftTitle.innerText = "Scissor";
     rightImage.src = images[random];
-    if (rightImage.src === "rock.png") {
+    if (rightImage.src === git+"rock.png") {
       rightTitle.innerText = "Rock";
-    } else if (rightImage.src === "paper.png") {
+    } else if (rightImage.src === git+"paper.png") {
       rightTitle.innerText = "Paper";
     } else {
       rightTitle.innerText = "Scissor";
@@ -372,7 +372,6 @@ let condition = function () {
 setInterval(condition, 100);
 
 let hide = function () {
-  console.log(1);
   if (
     document.getElementById("player-score").innerText === "10" ||
     document.getElementById("comp-score").innerText === "10"
@@ -380,6 +379,5 @@ let hide = function () {
     document.getElementById("bottom-btn").style.visibility = "hidden";
   }
 };
-
 
 setInterval(hide, 100);
